@@ -148,7 +148,7 @@ function Profile () {
         <Link to='/create-listing' className='createListing'>
           <img src={homeIcon} alt='home' />
           <p>Sell or Rent your home</p>
-          <img src={arrowRight} alt='arrow rigt' />
+          <img src={arrowRight} alt='arrow right' />
         </Link>
 
         {!loading && listings?.length > 0 && (

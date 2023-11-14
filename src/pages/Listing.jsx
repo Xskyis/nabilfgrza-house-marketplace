@@ -4,6 +4,7 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { getDoc, doc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { db } from '../firebase.config'
+// eslint-disable-next-line no-unused-vars
 import Spinner from '../components/Spinner'
 import shareIcon from '../assets/svg/shareIcon.svg'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -16,6 +17,7 @@ import { Pagination } from 'swiper/modules'
 
 function Listing () {
   const [listing, setListing] = useState(null)
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(true)
   const [shareLinkCopied, setShareLinkCopied] = useState(false)
 
@@ -29,9 +31,6 @@ function Listing () {
       const docSnap = await getDoc(docRef)
 
       if (docSnap.exists()) {
-        console.log('Listing:', listing)
-        console.log('Geolocation:', listing?.geolocation)
-
         setListing(docSnap.data())
         setLoading(false)
       }
@@ -89,7 +88,7 @@ function Listing () {
 
       <div className='listingDetails'>
         <p className='listingName'>
-          {listing?.name} - $
+          {listing?.name} - Rp
           {listing?.offer
             ? listing?.discountedPrice
                 .toString()
